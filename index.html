@@ -4,22 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#0f172a;color:#fff}
-nav{display:flex;justify-content:space-between;padding:20px 50px;background:#020617;position:sticky;top:0}
-nav h1{color:#38bdf8}
-nav a{color:#fff;margin-left:20px;text-decoration:none}
-.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;height:90vh;text-align:center}
-.hero h1{font-size:50px}
-.hero span{color:#38bdf8}
-.btn{margin-top:20px;padding:10px 20px;background:#38bdf8;border:none;border-radius:8px;color:#000;font-weight:bold}
-.section{padding:60px 50px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:#1e293b;padding:20px;border-radius:15px;transition:0.3s}
-.card:hover{transform:scale(1.05)}
-footer{text-align:center;padding:20px;background:#020617;margin-top:40px}
+body{background:linear-gradient(135deg,#020617,#0f172a);color:#fff;overflow-x:hidden}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:rgba(2,6,23,0.8);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100}
+nav h1{color:#38bdf8;font-weight:800}
+nav a{color:#fff;margin-left:25px;text-decoration:none;transition:0.3s}
+nav a:hover{color:#38bdf8}
+.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;text-align:center}
+.hero h1{font-size:60px;font-weight:800}
+.hero span{background:linear-gradient(90deg,#38bdf8,#818cf8);-webkit-background-clip:text;color:transparent}
+.hero p{margin-top:15px;font-size:18px;color:#cbd5f5}
+.btn{margin-top:25px;padding:12px 25px;border:none;border-radius:30px;background:linear-gradient(90deg,#38bdf8,#818cf8);color:#000;font-weight:600;cursor:pointer;transition:0.3s}
+.btn:hover{transform:scale(1.1)}
+.section{padding:80px 60px}
+.section h2{margin-bottom:30px;font-size:32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.card{background:rgba(30,41,59,0.6);padding:25px;border-radius:20px;backdrop-filter:blur(10px);transition:0.4s}
+.card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 10px 30px rgba(56,189,248,0.3)}
+.card h3{margin-bottom:10px}
+.card a{display:inline-block;margin-top:10px;color:#38bdf8;text-decoration:none}
+.card a:hover{text-decoration:underline}
+.contact p{margin:10px 0}
+footer{text-align:center;padding:20px;background:#020617;margin-top:40px;color:#94a3b8}
+.fade{opacity:0;transform:translateY(30px);transition:1s}
+.show{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
@@ -37,36 +47,28 @@ footer{text-align:center;padding:20px;background:#020617;margin-top:40px}
 <section class="hero">
 <h1>Hi, I'm <span>Shreni</span></h1>
 <p>Python Developer | Aspiring Software Engineer 🚀</p>
-<button class="btn">View Projects</button>
+<button class="btn" onclick="scrollToProjects()">View Projects</button>
 </section>
 
-<section id="about" class="section">
+<section id="about" class="section fade">
 <h2>About Me</h2>
-<p>I am a Computer Science student passionate about Python and web development.</p>
+<p>I am a passionate computer science student focused on building real-world projects using Python and modern web technologies. I love solving problems and continuously improving my skills.</p>
 </section>
 
-<section id="projects" class="section">
+<section id="projects" class="section fade">
 <h2>Projects</h2>
 <div class="cards">
 <div class="card">
 <h3>Quiz App 🎮</h3>
-<p>CLI based quiz game.</p>
+<p>CLI-based quiz game with scoring system.</p>
+<a href="#">View Code</a>
 </div>
 <div class="card">
 <h3>Guessing Game 🎯</h3>
-<p>Random number guessing game.</p>
+<p>Interactive number guessing game with hints.</p>
+<a href="#">View Code</a>
 </div>
 </div>
 </section>
 
-<section id="contact" class="section">
-<h2>Contact</h2>
-<p>Email:shreni021@gmail.com</p>
-</section>
-
-<footer>
-<p>© 2026 shreni Gopu</p>
-</footer>
-
-</body>
-</html>
+<s
